@@ -12,32 +12,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="039a5cb0-a3c3-46f3-b794-e7ed9eeee8f8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TPLexer/test/myTest.pas" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TPLexer/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TPLexer/cmake-build-debug/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TPLexer/cmake-build-debug/CMakeFiles/3.10.2/CMakeSystem.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/TPLexer/cmake-build-debug/CMakeFiles/3.10.2/CMakeSystem.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TPLexer/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/TPLexer/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TPLexer/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/TPLexer/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TPLexer/cmake-build-debug/CMakeFiles/CMakeRuleHashes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TPLexer/cmake-build-debug/CMakeFiles/CMakeRuleHashes.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TPLexer/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/TPLexer/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TPLexer/cmake-build-debug/CMakeFiles/TPLexer.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/TPLexer/cmake-build-debug/CMakeFiles/TPLexer.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TPLexer/cmake-build-debug/CMakeFiles/TPLexer.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/TPLexer/cmake-build-debug/CMakeFiles/TPLexer.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TPLexer/cmake-build-debug/CMakeFiles/TPLexer.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/TPLexer/cmake-build-debug/CMakeFiles/TPLexer.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TPLexer/cmake-build-debug/CMakeFiles/TPLexer.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/TPLexer/cmake-build-debug/CMakeFiles/TPLexer.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TPLexer/cmake-build-debug/CMakeFiles/TPLexer.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/TPLexer/cmake-build-debug/CMakeFiles/TPLexer.dir/flags.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TPLexer/cmake-build-debug/CMakeFiles/TPLexer.dir/flexer.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/TPLexer/cmake-build-debug/CMakeFiles/TPLexer.dir/flexer.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TPLexer/cmake-build-debug/CMakeFiles/TPLexer.dir/hlexer.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/TPLexer/cmake-build-debug/CMakeFiles/TPLexer.dir/hlexer.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TPLexer/cmake-build-debug/CMakeFiles/TPLexer.dir/language.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/TPLexer/cmake-build-debug/CMakeFiles/TPLexer.dir/language.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TPLexer/cmake-build-debug/CMakeFiles/TPLexer.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/TPLexer/cmake-build-debug/CMakeFiles/TPLexer.dir/main.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TPLexer/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TPLexer/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TPLexer/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TPLexer/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TPLexer/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/TPLexer/cmake-build-debug/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TPLexer/cmake-build-debug/TPLexer" beforeDir="false" afterPath="$PROJECT_DIR$/TPLexer/cmake-build-debug/TPLexer" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TPLexer/cmake-build-debug/TPLexer.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/TPLexer/cmake-build-debug/TPLexer.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TPLexer/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/TPLexer/cmake-build-debug/cmake_install.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TPLexer/flexerTMP.l" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TPLexer/floatLiteralTMP.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TPLexer/hlexer.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/TPLexer/hlexer.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TPLexer/flexer.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/TPLexer/flexer.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TPLexer/flexer.l" beforeDir="false" afterPath="$PROJECT_DIR$/TPLexer/flexer.l" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TPLexer/test/test.pas" beforeDir="false" afterPath="$PROJECT_DIR$/TPLexer/test/test.pas" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TPLexer/test/test0.pas" beforeDir="false" afterPath="$PROJECT_DIR$/TPLexer/test/test0.pas" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -72,7 +54,7 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration name="TPLexer" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="-f test/test0.pas" WORKING_DIR="file://.." PASS_PARENT_ENVS_2="true" PROJECT_NAME="TPLexer" TARGET_NAME="TPLexer" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="TPLexer" RUN_TARGET_NAME="TPLexer">
+    <configuration name="TPLexer" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="-f test/test.pas" WORKING_DIR="file://.." PASS_PARENT_ENVS_2="true" PROJECT_NAME="TPLexer" TARGET_NAME="TPLexer" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="TPLexer" RUN_TARGET_NAME="TPLexer">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -99,6 +81,8 @@
       <workItem from="1568799730893" duration="4404000" />
       <workItem from="1568827543275" duration="3451000" />
       <workItem from="1568832083122" duration="2282000" />
+      <workItem from="1568834842915" duration="4354000" />
+      <workItem from="1568840382557" duration="1296000" />
     </task>
     <servers />
   </component>

@@ -1,7 +1,30 @@
 program Quadratic;
 
 {http://progopedia.com/version/turbo-pascal-3.0/}
+{
+    this
+    is
+    a
+    test
 
+
+}
+{a test is this}
+
+(*
+t
+h
+i
+s
+is
+a
+t
+e
+s
+t
+
+
+*)
 var
    A,B,C,D: integer;
 

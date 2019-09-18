@@ -1,4 +1,4 @@
-/* SC-T-603-THYD Fall 2019. Project, lexical analysis. */
+/* SC-T-603-THYD Fall 2019. Project, lexical analysis.    [{]*[*]+([^}][^*]*[*]+)*[}]  */
 %option c++
 %option noyywrap
 %option yylineno
@@ -10,14 +10,16 @@
 /*(*(?i:WHILE) - mach not case sensitive*)*/
 /*(*REGULAR EXPRESSIONS*)*/
 ws [ \t\r\n]
-%x commentState
 letter [a-zA-Z]
 digit [0-9]
-closeComment "*)"
+
 
 %%
-"{".*[^}]"}"
-"(*".*[^*)]"*)"
+
+
+
+[{][^}]+[}]
+[(][*]([^*)][^*]*[*]+)*[)]
 
 
 "absolute"                          {return LNG::TokenName::t_absolute;}

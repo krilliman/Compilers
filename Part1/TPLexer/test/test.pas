@@ -12,6 +12,26 @@ program mktris{(input,output)};
    ----------------------------------------------------------------------
 }
 
+(*
+t
+h
+i
+s
+
+i
+s
+a
+t
+e
+s
+t
+
+
+h
+h
+e
+e
+*)
 (* test this name of a comment *)
 
 const { constant definitions }
