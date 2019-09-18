@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated>
+      <config projectName="TPLexer" targetName="TPLexer" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="039a5cb0-a3c3-46f3-b794-e7ed9eeee8f8" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="ProjectId" id="1QddHNq5wMiUKhNADunh6jsIDAM" />
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="TPLexer" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="-h test/test4.pas" WORKING_DIR="file://.." PASS_PARENT_ENVS_2="true" PROJECT_NAME="TPLexer" TARGET_NAME="TPLexer" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="TPLexer" RUN_TARGET_NAME="TPLexer">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="039a5cb0-a3c3-46f3-b794-e7ed9eeee8f8" name="Default Changelist" comment="" />
+      <created>1568104318333</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1568104318333</updated>
+      <workItem from="1568104321003" duration="11905000" />
+      <workItem from="1568137324355" duration="1720000" />
+      <workItem from="1568144077133" duration="60000" />
+      <workItem from="1568357545784" duration="5388000" />
+      <workItem from="1568397382297" duration="51000" />
+      <workItem from="1568703860564" duration="5202000" />
+      <workItem from="1568712537391" duration="1741000" />
+      <workItem from="1568725889755" duration="3992000" />
+      <workItem from="1568799730893" duration="4404000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+</project>

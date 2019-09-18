@@ -1,0 +1,3 @@
+/mnt/c/Users/Kristmann Ingi/Documents/Uni/Compilers/Part1/TPLexer/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/mnt/c/Users/Kristmann Ingi/Documents/Uni/Compilers/Part1/TPLexer/cmake-build-debug/CMakeFiles/TPLexer.dir
+/mnt/c/Users/Kristmann Ingi/Documents/Uni/Compilers/Part1/TPLexer/cmake-build-debug/CMakeFiles/edit_cache.dir
