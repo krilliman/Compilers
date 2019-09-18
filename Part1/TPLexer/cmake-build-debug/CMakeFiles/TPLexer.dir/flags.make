@@ -6,5 +6,5 @@ CXX_FLAGS =  -Wall -Wno-conversion -Wno-unused-function -Wno-register -Wno-depre
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I"/mnt/c/Users/Kristmann Ingi/Documents/Uni/Compilers/Part1/TPLexer/." 
+CXX_INCLUDES = -I"/mnt/c/Users/Kristmann Ingi/Documents/Uni/Compilers/GitHub/Part1/TPLexer/." 
 

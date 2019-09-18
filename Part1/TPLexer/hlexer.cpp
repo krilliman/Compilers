@@ -1,5 +1,4 @@
 #include "hlexer.h"
-
 //implement this file and submit
 bool HLexer::remove_whitespaces()
 {
@@ -66,7 +65,7 @@ void HLexer::process_string( Token& token )
 // Process identifier names.
 void HLexer::process_identifier( Token& token )
 {
-    // NOTE: Add your code here (instead of the provided c_next()).
+    map<string, Language::TokenName> tokenMap = Language::SpecialSymbolToTokenName;
     token.name = LNG::TN::t_unknown;
     while(!c_eoi()){
         if(!isspace(c_)){
@@ -78,67 +77,17 @@ void HLexer::process_identifier( Token& token )
                 break;
             }
         }
-        //string s;
-        //s.push_back(c_peek());
-       //const Language::TokenName test = Language::SpecialSymbolToTokenName.at(c_peek())
-       //change this so you check if the c_peek() is inside the Language::SpecialSymbolToTokenName map and
-       // it is check if our token.name is not inside Language::ReservedWordToTokenName if its not then
-       // we got a identifier
-        if(c_peek() == ':'){
+
+        if(c_peek() == '{')
+        {
             token.name = LNG::TN::t_identifier;
-            break;
-        }
-        if(c_peek() ==','){
-            token.name = LNG::TN::t_identifier;
-            break;
-        }
-        if(c_peek() == '+'){
-            token.name = LNG::TN::t_identifier;
-            break;
-        }
-        if(c_peek() == '*'){
-            token.name = LNG::TN::t_identifier;
-            break;
-        }
-        if(c_peek() == '-') {
-            token.name = LNG::TN::t_identifier;
-            break;
-        }
-        if(c_peek() == '<'){
-            token.name = LNG::TN::t_identifier;
-            break;
-        }
-        if(c_peek() == '('){
-            token.name = LNG::TN::t_identifier;
-            break;
-        }
-        if(c_peek() == ')'){
-            token.name = LNG::TN::t_identifier;
-            break;
-        }
-        if(c_peek() == ';'){
-            token.name = LNG::TN::t_identifier;
-            break;
-        }
-        if(c_peek() == '>'){
-            token.name = LNG::TN::t_identifier;
-            break;
-        }
-        if(c_peek() == '='){
-            token.name = LNG::TN::t_identifier;
-            break;
-        }
-        if(c_peek() == '/'){
-            token.name = LNG::TN::t_identifier;
-            break;
-        }
-        if(c_peek() == '{'){
-            token.name = LNG::TN::t_identifier;
-            c_next();
             remove_comment(token);
             break;
         }
-        if(c_peek() == '.'){
+        string c_string(1,c_peek());
+        map<string, Language::TokenName>::iterator itr = tokenMap.find(c_string);
+        if(itr != tokenMap.end())
+        {
             token.name = LNG::TN::t_identifier;
             break;
         }
