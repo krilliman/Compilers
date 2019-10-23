@@ -76,10 +76,10 @@ int main( int argc, char* argv[] ) {
 
   if (ast != nullptr) {
     PrintVisitor pvisitor(cout);
-    SemanticAnalysisVisitor sAVisitor(st);
+    SemanticAnalysisVisitor sa_visitor(st);
     ast->accept(pvisitor);
-    ast->accept(sAVisitor);
-
+    ast->accept(sa_visitor);
+    cout << "done with sa_visit" << endl;
   }
 
   // Clean up and return.

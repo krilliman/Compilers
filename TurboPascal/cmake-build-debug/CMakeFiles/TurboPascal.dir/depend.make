@@ -30,7 +30,9 @@ CMakeFiles/TurboPascal.dir/main.cpp.o: ../sa_visitor.h
 CMakeFiles/TurboPascal.dir/main.cpp.o: ../symbol_table.h
 
 CMakeFiles/TurboPascal.dir/sa_visitor.cpp.o: ../ast.h
+CMakeFiles/TurboPascal.dir/sa_visitor.cpp.o: ../common.h
 CMakeFiles/TurboPascal.dir/sa_visitor.cpp.o: ../language.h
 CMakeFiles/TurboPascal.dir/sa_visitor.cpp.o: ../sa_visitor.cpp
 CMakeFiles/TurboPascal.dir/sa_visitor.cpp.o: ../sa_visitor.h
+CMakeFiles/TurboPascal.dir/sa_visitor.cpp.o: ../symbol_table.h
 

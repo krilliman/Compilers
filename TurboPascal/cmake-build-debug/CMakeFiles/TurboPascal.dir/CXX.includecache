@@ -129,6 +129,12 @@ sa_visitor.h
 /mnt/c/Users/Kristmann Ingi/Documents/Uni/Compilers/GitHub/TurboPascal/sa_visitor.h
 ast.h
 /mnt/c/Users/Kristmann Ingi/Documents/Uni/Compilers/GitHub/TurboPascal/ast.h
+stack
+-
+symbol_table.h
+/mnt/c/Users/Kristmann Ingi/Documents/Uni/Compilers/GitHub/TurboPascal/symbol_table.h
+string
+-
 
 /mnt/c/Users/Kristmann Ingi/Documents/Uni/Compilers/GitHub/TurboPascal/symbol_table.h
 string
