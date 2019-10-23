@@ -76,7 +76,10 @@ int main( int argc, char* argv[] ) {
 
   if (ast != nullptr) {
     PrintVisitor pvisitor(cout);
+    SemanticAnalysisVisitor sAVisitor(st);
     ast->accept(pvisitor);
+    ast->accept(sAVisitor);
+
   }
 
   // Clean up and return.
