@@ -30,6 +30,8 @@ class VariableDeclNode;
 class ProcedureDeclNode;
 class FunctionDeclNode;
 
+class OptionalArgumentsNode;
+
 class VariableDeclarationsNode;
 class CallableDeclarationsNode;
 class BlockNode;
@@ -62,6 +64,7 @@ class Visitor {
   virtual void visit( const CallableDeclarationsNode* node ) = 0;
   virtual void visit( const BlockNode* node ) = 0;
   virtual void visit( const ProgramNode* node ) = 0;
+  virtual void visit( const OptionalArgumentsNode* node) = 0;
 };
 
 
@@ -367,7 +370,7 @@ class DeclPartNode : public Node { };
 
 class VariableDeclarationsNode : public DeclPartNode {
  public:
-  explicit VariableDeclarationsNode(std::list<VariableDeclNode*>& declarations )
+  explicit VariableDeclarationsNode(std::list<VariableDeclNode*>& declarations)
       : declarations_(std::move(declarations)) {};
 
   const std::list<VariableDeclNode*> get_declarations( ) const { return declarations_; }
@@ -420,6 +423,17 @@ class ProgramNode : public Node {
  private:
   std::string name_;
   BlockNode* blck_;
+};
+
+
+class OptionalArgumentsNode : public Node {
+ public :
+  OptionalArgumentsNode(std::list<ExprNode*> list) : list_(list){}
+  const std::list<ExprNode*> get_list()const{return list_;}
+  void accept( AST::Visitor& visitor ) const override { visitor.visit( this ); }
+
+ private:
+  std::list<ExprNode*> list_;
 };
 
 };

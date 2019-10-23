@@ -2,6 +2,7 @@ Program SimpleTest;
 var
     n: Integer;
     i,j: Integer;
+
 begin
     n := 10;
     if 1 < 2 then

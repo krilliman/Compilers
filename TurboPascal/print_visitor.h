@@ -218,6 +218,13 @@ class PrintVisitor : public AST::Visitor {
     output(os_, --indent_, ")\n");
   }
 
+  void visit(const AST::OptionalArgumentsNode * node)override {
+    assert(node != nullptr);
+
+    output(os_, indent_++, "(OptinalArgumentsNode \n");
+    output(os_, --indent_, ")\n");
+  }
+
  private:
 
   void accept(const AST::Node *node) {

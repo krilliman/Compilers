@@ -19,7 +19,6 @@ CMakeFiles/TurboPascal.dir/lexer.cpp.o: ../lexer.cpp
 CMakeFiles/TurboPascal.dir/lexer.cpp.o: ../lexer.h
 
 CMakeFiles/TurboPascal.dir/main.cpp.o: ../ast.h
-CMakeFiles/TurboPascal.dir/main.cpp.o: ../bparser.h
 CMakeFiles/TurboPascal.dir/main.cpp.o: ../common.h
 CMakeFiles/TurboPascal.dir/main.cpp.o: ../hparser.h
 CMakeFiles/TurboPascal.dir/main.cpp.o: ../language.h

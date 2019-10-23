@@ -190,6 +190,7 @@ AssignmentStmtNode* HParser::assignment_statement(string identifier ) {
   }
   VariableNode *var = variable_lvalue(*entry, identifier);
   match_token(LNG::TN::t_assign);
+
   ExprNode *expr = expression();
   return new AssignmentStmtNode(var, expr);
 }
@@ -276,7 +277,9 @@ ExprNode* HParser::factor() {
       error(token_.loc, "Identifier not found \"" + token_.text + "\"");
     }
     if (entry->entry_type == SymbolTable::EntryType::sFunction) {
-      expr = function_call("");
+      string identifier(token_.text);
+      match_token(LNG::TN::t_identifier);
+      expr = function_call(identifier);
     } else {
       expr = variable_rvalue( *entry );
     }
@@ -308,13 +311,21 @@ ExprNode* HParser::constant() {
 
 
 ProcedureDeclNode* HParser::procedure_declaration() {
-  match_token(LNG::TN::t_procedure);
+  //match_token(LNG::TN::t_procedure);
   string identifier(token_.text);
   scope_ = identifier;
   match_token(LNG::TN::t_identifier);
   auto params = optional_parameters();
-  // example of signature is name1::name2::name3
-  symbol_table_.add_procedure(identifier, "");   // TO DO: Implement ... set signature
+  string signature = "";
+  if(params != nullptr){
+    for(auto i : params->get_declarations()){
+      for(auto j : i->get_identifiers()){
+        signature += j + ":";
+      }
+      signature += i->get_data_type().str() + ",";
+    }
+  }
+  symbol_table_.add_procedure(identifier, signature);   // TO DO: Implement ... set signature
   match_token(LNG::TN::t_semicolon);
   auto block_node = block();
   match_token(LNG::TN::t_semicolon);
@@ -327,10 +338,22 @@ ProcedureDeclNode* HParser::procedure_declaration() {
 
 CallableDeclarationsNode* HParser::callable_declarations() {
 
+  bool loop = true;
   list<CallableDeclNode *> declarations;
-
   /* TO DO: Implement ... */
-
+  while(loop){
+    if(match_token_if(LNG::TN::t_procedure)){
+      auto procedure = procedure_declaration();
+      declarations.push_back(procedure);
+    }
+    else if(match_token_if(LNG::TN::t_function)){
+      auto function = function_declaration();
+      declarations.push_back(function);
+    }
+    else{
+      loop = false;
+    }
+  }
   return new CallableDeclarationsNode(declarations);
 }
 
@@ -338,9 +361,18 @@ CallableDeclarationsNode* HParser::callable_declarations() {
 VariableDeclarationsNode* HParser::optional_parameters() {
   /* TO DO: Implement ... */
   /* Note that in all methods that you are to implement, you most likely have to change the return value. */
-  auto expr = nullptr;
-  if(match_token_if(LNG::))
 
+  if(match_token_if(LNG::TN::t_lparenthesis)){
+    list<VariableDeclNode*> declarations;
+    auto list = parameter_list();
+    declarations.push_back(list);
+    while(match_token_if(LNG::TN::t_semicolon)){
+      auto newList = parameter_list();
+      declarations.push_back(list);
+    }
+    match_token(LNG::TN::t_rparenthesis);
+    return new VariableDeclarationsNode(declarations);
+  }
   return nullptr;
 }
 
@@ -349,12 +381,12 @@ VariableDeclNode* HParser::parameter_list() {
   /* TO DO: Implement ... */
   /* Note that in all methods that you are to implement, you most likely have to change the return value. */
   std::list<std::string> idenitfiers;
-  match_token(LNG::TN::t_identifier);
   string identifier1(token_.text);
+  match_token(LNG::TN::t_identifier);
   idenitfiers.push_back(identifier1);
   while(match_token_if(LNG::TN::t_comma)){
-    match_token(LNG::TN::t_identifier);
     string newIdentifier(token_.text);
+    match_token(LNG::TN::t_identifier);
     idenitfiers.push_back(newIdentifier);
   }
   match_token(LNG::TN::t_colon);
@@ -369,7 +401,7 @@ FunctionDeclNode* HParser::function_declaration() {
   /* TO DO: Implement ... */
   /* Note that in all methods that you are to implement, you most likely have to change the return value. */
 
-  match_token(LNG::TN::t_program);
+  //match_token(LNG::TN::t_function);
   string identifier(token_.text);
   scope_ = identifier;
   match_token(LNG::TN::t_identifier);
@@ -377,11 +409,21 @@ FunctionDeclNode* HParser::function_declaration() {
   match_token(LNG::TN::t_colon);
   auto type = simple_type();
   LNG::DataType dType = LNG::DataType(type);
+  match_token(LNG::TN::t_semicolon);
+  string signature = "";
+  for(auto i : params->get_declarations()){
+    for(auto j : i->get_identifiers()){
+      signature += j + ":";
+    }
+    signature += i->get_data_type().str() + ",";
+  }
+  // add signature to the symbol table
+  symbol_table_.add_function(identifier, signature, dType);
+
   auto block_node = block();
   match_token(LNG::TN::t_semicolon);
   scope_ = "";
-  // add signature to the symbol table
-  symbol_table_.add_function(identifier, "", dType);
+
   auto retVal = new FunctionDeclNode(identifier, params, block_node, dType);
   return retVal;
 }
@@ -412,13 +454,27 @@ IfStmtNode* HParser::if_statement() {
   return retVal;
 }
 
+OptionalArgumentsNode* HParser::optional_arguments(){
+  if(match_token_if(LNG::TokenName::t_lparenthesis)){
+    list<ExprNode*> list;
+    auto expr = expression();
+    list.push_back(expr);
+    while(match_token_if(LNG::TokenName::t_colon)){
+      auto newExpr = expression();
+      list.push_back(newExpr);
+    }
+    match_token(LNG::TN::t_rparenthesis);
+    return new OptionalArgumentsNode(list);
+  }
+  return nullptr;
+}
 
 ProcedureCallStmtNode* HParser::procedure_call_statement(const string &identifier ) {
   /* TO DO: Implement ... */
   /* Note that in all methods that you are to implement, you most likely have to change the return value. */
   string name = identifier;
-  //auto args = optional
-  return nullptr;
+  auto args = optional_arguments();
+  return new ProcedureCallStmtNode(name, args->get_list());
 }
 
 WhileStmtNode* HParser::while_statement() {
@@ -435,7 +491,6 @@ WhileStmtNode* HParser::while_statement() {
 
 VariableExprNode* HParser::variable_rvalue(SymbolTable::Entry& entry ) {
   /* TO DO: Implement ... */
-
   ExprNode *expr = nullptr;
   std::string identifier(token_.text);
   match_token(LNG::TN::t_identifier);
@@ -493,7 +548,7 @@ ExprNode* HParser::term() {
 ExprNode* HParser::complemented_factor() {
   /* TO DO: Implement ... */
   /* Note that in all methods that you are to implement, you most likely have to change the return value. */
-  ExprNode * expr = signed_factor();
+  ExprNode *expr = signed_factor();
   if(match_token_if(LNG::TN::t_not)){
     expr = new OpExprNode(Language::ExprOperator::o_not, nullptr, expr);
   }
@@ -504,9 +559,13 @@ ExprNode* HParser::complemented_factor() {
 ExprNode* HParser::signed_factor() {
   /* TO DO: Implement ... */
   /* Note that in all methods that you are to implement, you most likely have to change the return value. */
-  ExprNode *expr = factor();
+  ExprNode *expr = nullptr;
   if(match_token_if(LNG::TN::t_minus)){
+    expr = factor();
     expr = new OpExprNode(Language::ExprOperator::o_minus, nullptr, expr);
+  }
+  else{
+    expr = factor();
   }
   return expr;
 }
@@ -539,8 +598,6 @@ RealExprNode* HParser::real_constant() {
 FunctionCallExprNode* HParser::function_call(const string &identifier ) {
   /* TO DO: Implement ... */
   /* Note that in all methods that you are to implement, you most likely have to change the return value. */
-
-  //std::list<ExprNode*> args = optional_parameters();
-  return nullptr;
-  //return new FunctionCallExprNode(identifier, args);
+  auto args = optional_arguments();
+  return new FunctionCallExprNode(identifier, args->get_list());
 }

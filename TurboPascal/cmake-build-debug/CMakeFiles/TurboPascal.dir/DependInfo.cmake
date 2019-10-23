@@ -4,11 +4,11 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/mnt/c/Users/Kristmann Ingi/Documents/Uni/Compilers/Part2/TurboPascal/hparser.cpp" "/mnt/c/Users/Kristmann Ingi/Documents/Uni/Compilers/Part2/TurboPascal/cmake-build-debug/CMakeFiles/TurboPascal.dir/hparser.cpp.o"
-  "/mnt/c/Users/Kristmann Ingi/Documents/Uni/Compilers/Part2/TurboPascal/language.cpp" "/mnt/c/Users/Kristmann Ingi/Documents/Uni/Compilers/Part2/TurboPascal/cmake-build-debug/CMakeFiles/TurboPascal.dir/language.cpp.o"
-  "/mnt/c/Users/Kristmann Ingi/Documents/Uni/Compilers/Part2/TurboPascal/lexer.cpp" "/mnt/c/Users/Kristmann Ingi/Documents/Uni/Compilers/Part2/TurboPascal/cmake-build-debug/CMakeFiles/TurboPascal.dir/lexer.cpp.o"
-  "/mnt/c/Users/Kristmann Ingi/Documents/Uni/Compilers/Part2/TurboPascal/main.cpp" "/mnt/c/Users/Kristmann Ingi/Documents/Uni/Compilers/Part2/TurboPascal/cmake-build-debug/CMakeFiles/TurboPascal.dir/main.cpp.o"
-  "/mnt/c/Users/Kristmann Ingi/Documents/Uni/Compilers/Part2/TurboPascal/sa_visitor.cpp" "/mnt/c/Users/Kristmann Ingi/Documents/Uni/Compilers/Part2/TurboPascal/cmake-build-debug/CMakeFiles/TurboPascal.dir/sa_visitor.cpp.o"
+  "/mnt/c/Users/Kristmann Ingi/Documents/Uni/Compilers/GitHub/TurboPascal/hparser.cpp" "/mnt/c/Users/Kristmann Ingi/Documents/Uni/Compilers/GitHub/TurboPascal/cmake-build-debug/CMakeFiles/TurboPascal.dir/hparser.cpp.o"
+  "/mnt/c/Users/Kristmann Ingi/Documents/Uni/Compilers/GitHub/TurboPascal/language.cpp" "/mnt/c/Users/Kristmann Ingi/Documents/Uni/Compilers/GitHub/TurboPascal/cmake-build-debug/CMakeFiles/TurboPascal.dir/language.cpp.o"
+  "/mnt/c/Users/Kristmann Ingi/Documents/Uni/Compilers/GitHub/TurboPascal/lexer.cpp" "/mnt/c/Users/Kristmann Ingi/Documents/Uni/Compilers/GitHub/TurboPascal/cmake-build-debug/CMakeFiles/TurboPascal.dir/lexer.cpp.o"
+  "/mnt/c/Users/Kristmann Ingi/Documents/Uni/Compilers/GitHub/TurboPascal/main.cpp" "/mnt/c/Users/Kristmann Ingi/Documents/Uni/Compilers/GitHub/TurboPascal/cmake-build-debug/CMakeFiles/TurboPascal.dir/main.cpp.o"
+  "/mnt/c/Users/Kristmann Ingi/Documents/Uni/Compilers/GitHub/TurboPascal/sa_visitor.cpp" "/mnt/c/Users/Kristmann Ingi/Documents/Uni/Compilers/GitHub/TurboPascal/cmake-build-debug/CMakeFiles/TurboPascal.dir/sa_visitor.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

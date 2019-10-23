@@ -67,7 +67,7 @@ class HParser: public Parser {
 
   AST::VariableExprNode *variable_rvalue(SymbolTable::Entry &entry);
   AST::FunctionCallExprNode *function_call(const std::string &identifier);
-
+  AST::OptionalArgumentsNode *optional_arguments();
   //////////////////////////////////////////////////////////////////////////
 
   auto operator_in(const std::map<Language::TokenName, Language::ExprOperator> &op_map) {

@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/mnt/c/Users/Kristmann Ingi/Documents/Uni/Compilers/Part2/TurboPascal"
+CMAKE_SOURCE_DIR = "/mnt/c/Users/Kristmann Ingi/Documents/Uni/Compilers/GitHub/TurboPascal"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/mnt/c/Users/Kristmann Ingi/Documents/Uni/Compilers/Part2/TurboPascal/cmake-build-debug"
+CMAKE_BINARY_DIR = "/mnt/c/Users/Kristmann Ingi/Documents/Uni/Compilers/GitHub/TurboPascal/cmake-build-debug"
 
 # Include any dependencies generated for this target.
 include CMakeFiles/TurboPascal.dir/depend.make
@@ -59,16 +59,16 @@ include CMakeFiles/TurboPascal.dir/flags.make
 
 CMakeFiles/TurboPascal.dir/main.cpp.o: CMakeFiles/TurboPascal.dir/flags.make
 CMakeFiles/TurboPascal.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/mnt/c/Users/Kristmann Ingi/Documents/Uni/Compilers/Part2/TurboPascal/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/TurboPascal.dir/main.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TurboPascal.dir/main.cpp.o -c "/mnt/c/Users/Kristmann Ingi/Documents/Uni/Compilers/Part2/TurboPascal/main.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/mnt/c/Users/Kristmann Ingi/Documents/Uni/Compilers/GitHub/TurboPascal/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/TurboPascal.dir/main.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TurboPascal.dir/main.cpp.o -c "/mnt/c/Users/Kristmann Ingi/Documents/Uni/Compilers/GitHub/TurboPascal/main.cpp"
 
 CMakeFiles/TurboPascal.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TurboPascal.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/c/Users/Kristmann Ingi/Documents/Uni/Compilers/Part2/TurboPascal/main.cpp" > CMakeFiles/TurboPascal.dir/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/c/Users/Kristmann Ingi/Documents/Uni/Compilers/GitHub/TurboPascal/main.cpp" > CMakeFiles/TurboPascal.dir/main.cpp.i
 
 CMakeFiles/TurboPascal.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TurboPascal.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/c/Users/Kristmann Ingi/Documents/Uni/Compilers/Part2/TurboPascal/main.cpp" -o CMakeFiles/TurboPascal.dir/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/c/Users/Kristmann Ingi/Documents/Uni/Compilers/GitHub/TurboPascal/main.cpp" -o CMakeFiles/TurboPascal.dir/main.cpp.s
 
 CMakeFiles/TurboPascal.dir/main.cpp.o.requires:
 
@@ -83,16 +83,16 @@ CMakeFiles/TurboPascal.dir/main.cpp.o.provides.build: CMakeFiles/TurboPascal.dir
 
 CMakeFiles/TurboPascal.dir/hparser.cpp.o: CMakeFiles/TurboPascal.dir/flags.make
 CMakeFiles/TurboPascal.dir/hparser.cpp.o: ../hparser.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/mnt/c/Users/Kristmann Ingi/Documents/Uni/Compilers/Part2/TurboPascal/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/TurboPascal.dir/hparser.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TurboPascal.dir/hparser.cpp.o -c "/mnt/c/Users/Kristmann Ingi/Documents/Uni/Compilers/Part2/TurboPascal/hparser.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/mnt/c/Users/Kristmann Ingi/Documents/Uni/Compilers/GitHub/TurboPascal/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/TurboPascal.dir/hparser.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TurboPascal.dir/hparser.cpp.o -c "/mnt/c/Users/Kristmann Ingi/Documents/Uni/Compilers/GitHub/TurboPascal/hparser.cpp"
 
 CMakeFiles/TurboPascal.dir/hparser.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TurboPascal.dir/hparser.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/c/Users/Kristmann Ingi/Documents/Uni/Compilers/Part2/TurboPascal/hparser.cpp" > CMakeFiles/TurboPascal.dir/hparser.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/c/Users/Kristmann Ingi/Documents/Uni/Compilers/GitHub/TurboPascal/hparser.cpp" > CMakeFiles/TurboPascal.dir/hparser.cpp.i
 
 CMakeFiles/TurboPascal.dir/hparser.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TurboPascal.dir/hparser.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/c/Users/Kristmann Ingi/Documents/Uni/Compilers/Part2/TurboPascal/hparser.cpp" -o CMakeFiles/TurboPascal.dir/hparser.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/c/Users/Kristmann Ingi/Documents/Uni/Compilers/GitHub/TurboPascal/hparser.cpp" -o CMakeFiles/TurboPascal.dir/hparser.cpp.s
 
 CMakeFiles/TurboPascal.dir/hparser.cpp.o.requires:
 
@@ -107,16 +107,16 @@ CMakeFiles/TurboPascal.dir/hparser.cpp.o.provides.build: CMakeFiles/TurboPascal.
 
 CMakeFiles/TurboPascal.dir/sa_visitor.cpp.o: CMakeFiles/TurboPascal.dir/flags.make
 CMakeFiles/TurboPascal.dir/sa_visitor.cpp.o: ../sa_visitor.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/mnt/c/Users/Kristmann Ingi/Documents/Uni/Compilers/Part2/TurboPascal/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/TurboPascal.dir/sa_visitor.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TurboPascal.dir/sa_visitor.cpp.o -c "/mnt/c/Users/Kristmann Ingi/Documents/Uni/Compilers/Part2/TurboPascal/sa_visitor.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/mnt/c/Users/Kristmann Ingi/Documents/Uni/Compilers/GitHub/TurboPascal/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/TurboPascal.dir/sa_visitor.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TurboPascal.dir/sa_visitor.cpp.o -c "/mnt/c/Users/Kristmann Ingi/Documents/Uni/Compilers/GitHub/TurboPascal/sa_visitor.cpp"
 
 CMakeFiles/TurboPascal.dir/sa_visitor.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TurboPascal.dir/sa_visitor.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/c/Users/Kristmann Ingi/Documents/Uni/Compilers/Part2/TurboPascal/sa_visitor.cpp" > CMakeFiles/TurboPascal.dir/sa_visitor.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/c/Users/Kristmann Ingi/Documents/Uni/Compilers/GitHub/TurboPascal/sa_visitor.cpp" > CMakeFiles/TurboPascal.dir/sa_visitor.cpp.i
 
 CMakeFiles/TurboPascal.dir/sa_visitor.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TurboPascal.dir/sa_visitor.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/c/Users/Kristmann Ingi/Documents/Uni/Compilers/Part2/TurboPascal/sa_visitor.cpp" -o CMakeFiles/TurboPascal.dir/sa_visitor.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/c/Users/Kristmann Ingi/Documents/Uni/Compilers/GitHub/TurboPascal/sa_visitor.cpp" -o CMakeFiles/TurboPascal.dir/sa_visitor.cpp.s
 
 CMakeFiles/TurboPascal.dir/sa_visitor.cpp.o.requires:
 
@@ -131,16 +131,16 @@ CMakeFiles/TurboPascal.dir/sa_visitor.cpp.o.provides.build: CMakeFiles/TurboPasc
 
 CMakeFiles/TurboPascal.dir/lexer.cpp.o: CMakeFiles/TurboPascal.dir/flags.make
 CMakeFiles/TurboPascal.dir/lexer.cpp.o: ../lexer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/mnt/c/Users/Kristmann Ingi/Documents/Uni/Compilers/Part2/TurboPascal/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/TurboPascal.dir/lexer.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TurboPascal.dir/lexer.cpp.o -c "/mnt/c/Users/Kristmann Ingi/Documents/Uni/Compilers/Part2/TurboPascal/lexer.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/mnt/c/Users/Kristmann Ingi/Documents/Uni/Compilers/GitHub/TurboPascal/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/TurboPascal.dir/lexer.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TurboPascal.dir/lexer.cpp.o -c "/mnt/c/Users/Kristmann Ingi/Documents/Uni/Compilers/GitHub/TurboPascal/lexer.cpp"
 
 CMakeFiles/TurboPascal.dir/lexer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TurboPascal.dir/lexer.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/c/Users/Kristmann Ingi/Documents/Uni/Compilers/Part2/TurboPascal/lexer.cpp" > CMakeFiles/TurboPascal.dir/lexer.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/c/Users/Kristmann Ingi/Documents/Uni/Compilers/GitHub/TurboPascal/lexer.cpp" > CMakeFiles/TurboPascal.dir/lexer.cpp.i
 
 CMakeFiles/TurboPascal.dir/lexer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TurboPascal.dir/lexer.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/c/Users/Kristmann Ingi/Documents/Uni/Compilers/Part2/TurboPascal/lexer.cpp" -o CMakeFiles/TurboPascal.dir/lexer.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/c/Users/Kristmann Ingi/Documents/Uni/Compilers/GitHub/TurboPascal/lexer.cpp" -o CMakeFiles/TurboPascal.dir/lexer.cpp.s
 
 CMakeFiles/TurboPascal.dir/lexer.cpp.o.requires:
 
@@ -155,16 +155,16 @@ CMakeFiles/TurboPascal.dir/lexer.cpp.o.provides.build: CMakeFiles/TurboPascal.di
 
 CMakeFiles/TurboPascal.dir/language.cpp.o: CMakeFiles/TurboPascal.dir/flags.make
 CMakeFiles/TurboPascal.dir/language.cpp.o: ../language.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/mnt/c/Users/Kristmann Ingi/Documents/Uni/Compilers/Part2/TurboPascal/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/TurboPascal.dir/language.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TurboPascal.dir/language.cpp.o -c "/mnt/c/Users/Kristmann Ingi/Documents/Uni/Compilers/Part2/TurboPascal/language.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/mnt/c/Users/Kristmann Ingi/Documents/Uni/Compilers/GitHub/TurboPascal/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/TurboPascal.dir/language.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TurboPascal.dir/language.cpp.o -c "/mnt/c/Users/Kristmann Ingi/Documents/Uni/Compilers/GitHub/TurboPascal/language.cpp"
 
 CMakeFiles/TurboPascal.dir/language.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TurboPascal.dir/language.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/c/Users/Kristmann Ingi/Documents/Uni/Compilers/Part2/TurboPascal/language.cpp" > CMakeFiles/TurboPascal.dir/language.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/c/Users/Kristmann Ingi/Documents/Uni/Compilers/GitHub/TurboPascal/language.cpp" > CMakeFiles/TurboPascal.dir/language.cpp.i
 
 CMakeFiles/TurboPascal.dir/language.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TurboPascal.dir/language.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/c/Users/Kristmann Ingi/Documents/Uni/Compilers/Part2/TurboPascal/language.cpp" -o CMakeFiles/TurboPascal.dir/language.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/c/Users/Kristmann Ingi/Documents/Uni/Compilers/GitHub/TurboPascal/language.cpp" -o CMakeFiles/TurboPascal.dir/language.cpp.s
 
 CMakeFiles/TurboPascal.dir/language.cpp.o.requires:
 
@@ -195,7 +195,7 @@ TurboPascal: CMakeFiles/TurboPascal.dir/lexer.cpp.o
 TurboPascal: CMakeFiles/TurboPascal.dir/language.cpp.o
 TurboPascal: CMakeFiles/TurboPascal.dir/build.make
 TurboPascal: CMakeFiles/TurboPascal.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/mnt/c/Users/Kristmann Ingi/Documents/Uni/Compilers/Part2/TurboPascal/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable TurboPascal"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/mnt/c/Users/Kristmann Ingi/Documents/Uni/Compilers/GitHub/TurboPascal/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable TurboPascal"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/TurboPascal.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -216,6 +216,6 @@ CMakeFiles/TurboPascal.dir/clean:
 .PHONY : CMakeFiles/TurboPascal.dir/clean
 
 CMakeFiles/TurboPascal.dir/depend:
-	cd "/mnt/c/Users/Kristmann Ingi/Documents/Uni/Compilers/Part2/TurboPascal/cmake-build-debug" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/mnt/c/Users/Kristmann Ingi/Documents/Uni/Compilers/Part2/TurboPascal" "/mnt/c/Users/Kristmann Ingi/Documents/Uni/Compilers/Part2/TurboPascal" "/mnt/c/Users/Kristmann Ingi/Documents/Uni/Compilers/Part2/TurboPascal/cmake-build-debug" "/mnt/c/Users/Kristmann Ingi/Documents/Uni/Compilers/Part2/TurboPascal/cmake-build-debug" "/mnt/c/Users/Kristmann Ingi/Documents/Uni/Compilers/Part2/TurboPascal/cmake-build-debug/CMakeFiles/TurboPascal.dir/DependInfo.cmake" --color=$(COLOR)
+	cd "/mnt/c/Users/Kristmann Ingi/Documents/Uni/Compilers/GitHub/TurboPascal/cmake-build-debug" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/mnt/c/Users/Kristmann Ingi/Documents/Uni/Compilers/GitHub/TurboPascal" "/mnt/c/Users/Kristmann Ingi/Documents/Uni/Compilers/GitHub/TurboPascal" "/mnt/c/Users/Kristmann Ingi/Documents/Uni/Compilers/GitHub/TurboPascal/cmake-build-debug" "/mnt/c/Users/Kristmann Ingi/Documents/Uni/Compilers/GitHub/TurboPascal/cmake-build-debug" "/mnt/c/Users/Kristmann Ingi/Documents/Uni/Compilers/GitHub/TurboPascal/cmake-build-debug/CMakeFiles/TurboPascal.dir/DependInfo.cmake" --color=$(COLOR)
 .PHONY : CMakeFiles/TurboPascal.dir/depend
 
