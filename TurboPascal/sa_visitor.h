@@ -4,6 +4,7 @@
 #include "ast.h"
 #include <stack>
 #include "symbol_table.h"
+#include <string>
 using namespace AST;
 class SemanticAnalysisVisitor : public Visitor {
  public:
@@ -21,10 +22,29 @@ class SemanticAnalysisVisitor : public Visitor {
     stringStack_.push(node->get_str());
   }
   virtual void visit( const OpExprNode* node )override{
-
+    if(node->get_op() == LNG::ExprOperator::o_multiply){
+      auto rhs = node->get_rhs();
+      auto lhs = node->get_lhs();
+    }
   }
   virtual void visit( const VariableExprNode* node ) override{
-    //if(node->)
+    auto n = table_->lookup("",node->get_name());
+    if(n->data_type.str() == "int"){
+      int t = std::stoi(n->str());
+      intStack_.push(t);
+    }
+    else if(n->str() == "false"){
+      bool t = false;
+      boolStack_.push(t);
+    }
+    else if(n->str() == "true"){
+      bool t = true;
+      boolStack_.push(t);
+    }
+    else if(n->data_type.str() == "float"){
+      float t = std::stof(n->str());
+      floatStack_.push(t);
+    }
   }
   virtual void visit( const FunctionCallExprNode* node )override{
 
