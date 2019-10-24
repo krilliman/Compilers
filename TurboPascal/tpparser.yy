@@ -169,8 +169,8 @@ class BParser;
 %type <LNG::DataType> type
 
 %type <AST::CallableDeclarationsNode*> callable_declarations
-%type <AST::ProcedureDeclNode*> proceture_declarations
-%type <AST::FunctionDeclNode*> function_declarations
+%type <AST::ProcedureDeclNode*> procedure_declarations
+%type <AST::FunctionDeclNode*> function_declaration
 
 %type <std::list<AST::StmtNode*>> list_statement
 %type <AST::StmtNode*> statement
@@ -189,7 +189,7 @@ class BParser;
 
 %%
 program:
-    t_program t_identifier t_semicolon
+    t_program t_identifier t_semicolon t_lpa
     main_block
     t_dot
     { prs.set_AST( new AST::ProgramNode( $2, $4 ) ); }
@@ -222,11 +222,11 @@ variable_declaration:
     { $$ = new AST::VariableDeclNode( $1, $3 ); }
 ;
 
-list_identifier:
-    list_identifier t_comma t_identifier
+argument_list:
+    argument_list t_comma expression
     { $1.push_back( $3 ); $$ = $1; }
     |
-    t_identifier
+    expression
     { std::list<std::string> lst; lst.push_back( $1 ); $$ = lst; }
 ;
 
@@ -355,7 +355,7 @@ if_statement:
 ;
 
 while_statement:
-    t_while expression do statement
+    t_while expression t_do statement
     { $$ = new AST::WhileStmtNode($2, $4); }
 ;
 
