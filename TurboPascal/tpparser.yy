@@ -197,6 +197,14 @@ class BParser;
 %type <AST::StmtNode*> structured_statement
 %type <std::list<AST::CallableDeclNode*>> callable_declarations_list
 
+%type <AST::ExprNode*> factor
+%type <AST::ExprNode*> signed_factor
+%type <AST::ExprNode*> complemented_factor
+%type <AST::ExprNode*> term
+%type <AST::ExprNode*> simple_expression
+
+%type <AST::FunctionCallExprNode*> function_call
+
 
 %%
 program:
@@ -490,6 +498,29 @@ expression:
     t_integer_l
     { $$ = new AST::IntegerExprNode( std::stoi($1) ); }
 ;
+
+simple_expression:
+    variable_r
+;
+factor:
+
+;
+signed_factor:
+
+;
+complemented_factor:
+
+;
+term:
+
+;
+
+function_call:
+
+;
+
+
+
 
 %%
 
