@@ -16,6 +16,14 @@ list
 language.h
 /mnt/c/Users/Kristmann Ingi/Documents/Uni/Compilers/GitHub/TurboPascal/language.h
 
+/mnt/c/Users/Kristmann Ingi/Documents/Uni/Compilers/GitHub/TurboPascal/bparser.h
+parser.h
+/mnt/c/Users/Kristmann Ingi/Documents/Uni/Compilers/GitHub/TurboPascal/parser.h
+lexer.h
+/mnt/c/Users/Kristmann Ingi/Documents/Uni/Compilers/GitHub/TurboPascal/lexer.h
+tpparser.h
+/mnt/c/Users/Kristmann Ingi/Documents/Uni/Compilers/GitHub/TurboPascal/tpparser.h
+
 /mnt/c/Users/Kristmann Ingi/Documents/Uni/Compilers/GitHub/TurboPascal/common.h
 string
 -
@@ -88,6 +96,14 @@ common.h
 language.h
 /mnt/c/Users/Kristmann Ingi/Documents/Uni/Compilers/GitHub/TurboPascal/language.h
 
+/mnt/c/Users/Kristmann Ingi/Documents/Uni/Compilers/GitHub/TurboPascal/location.hh
+algorithm
+-
+iostream
+-
+string
+-
+
 /mnt/c/Users/Kristmann Ingi/Documents/Uni/Compilers/GitHub/TurboPascal/main.cpp
 iostream
 -
@@ -105,12 +121,16 @@ print_visitor.h
 /mnt/c/Users/Kristmann Ingi/Documents/Uni/Compilers/GitHub/TurboPascal/print_visitor.h
 sa_visitor.h
 /mnt/c/Users/Kristmann Ingi/Documents/Uni/Compilers/GitHub/TurboPascal/sa_visitor.h
+bparser.h
+/mnt/c/Users/Kristmann Ingi/Documents/Uni/Compilers/GitHub/TurboPascal/bparser.h
 
 /mnt/c/Users/Kristmann Ingi/Documents/Uni/Compilers/GitHub/TurboPascal/parser.h
 iostream
 -
 string
 -
+symbol_table.h
+/mnt/c/Users/Kristmann Ingi/Documents/Uni/Compilers/GitHub/TurboPascal/symbol_table.h
 ast.h
 /mnt/c/Users/Kristmann Ingi/Documents/Uni/Compilers/GitHub/TurboPascal/ast.h
 
@@ -135,6 +155,10 @@ symbol_table.h
 /mnt/c/Users/Kristmann Ingi/Documents/Uni/Compilers/GitHub/TurboPascal/symbol_table.h
 string
 -
+error.h
+-
+vector
+-
 
 /mnt/c/Users/Kristmann Ingi/Documents/Uni/Compilers/GitHub/TurboPascal/symbol_table.h
 string
@@ -147,4 +171,30 @@ language.h
 /mnt/c/Users/Kristmann Ingi/Documents/Uni/Compilers/GitHub/TurboPascal/language.h
 common.h
 /mnt/c/Users/Kristmann Ingi/Documents/Uni/Compilers/GitHub/TurboPascal/common.h
+
+/mnt/c/Users/Kristmann Ingi/Documents/Uni/Compilers/GitHub/TurboPascal/tpparser.h
+string
+-
+common.h
+/mnt/c/Users/Kristmann Ingi/Documents/Uni/Compilers/GitHub/TurboPascal/common.h
+ast.h
+/mnt/c/Users/Kristmann Ingi/Documents/Uni/Compilers/GitHub/TurboPascal/ast.h
+cassert
+-
+cstdlib
+-
+iostream
+-
+stdexcept
+-
+string
+-
+vector
+-
+location.hh
+/mnt/c/Users/Kristmann Ingi/Documents/Uni/Compilers/GitHub/TurboPascal/location.hh
+typeinfo
+-
+cassert
+-
 

@@ -4,6 +4,7 @@
 
 #include <iostream>
 #include <string>
+#include "symbol_table.h"
 #include "ast.h"
 
 class Parser {
@@ -22,10 +23,14 @@ class Parser {
   void set_AST( AST::Node* node ) { ast_ = node; }
 
   // Return the root node of the abstract syntax tree.
-  AST::Node* get_AST( ) { return ast_; }
+  AST::Node* get_AST( ) {
+    std::cout << "getting ast in parser.h" << std::endl;
+    return ast_;
+  }
 
   // Access the symbol table.
   SymbolTable* get_SymbolTable( ) { return &symbol_table_; }
+  //virtual SymbolTable* get_SymbolTable( ) const = 0;
 
   // Destructor.
   virtual ~Parser() = default;

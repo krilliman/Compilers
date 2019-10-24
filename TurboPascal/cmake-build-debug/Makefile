@@ -258,6 +258,33 @@ sa_visitor.cpp.s:
 	$(MAKE) -f CMakeFiles/TurboPascal.dir/build.make CMakeFiles/TurboPascal.dir/sa_visitor.cpp.s
 .PHONY : sa_visitor.cpp.s
 
+tpparser.o: tpparser.cpp.o
+
+.PHONY : tpparser.o
+
+# target to build an object file
+tpparser.cpp.o:
+	$(MAKE) -f CMakeFiles/TurboPascal.dir/build.make CMakeFiles/TurboPascal.dir/tpparser.cpp.o
+.PHONY : tpparser.cpp.o
+
+tpparser.i: tpparser.cpp.i
+
+.PHONY : tpparser.i
+
+# target to preprocess a source file
+tpparser.cpp.i:
+	$(MAKE) -f CMakeFiles/TurboPascal.dir/build.make CMakeFiles/TurboPascal.dir/tpparser.cpp.i
+.PHONY : tpparser.cpp.i
+
+tpparser.s: tpparser.cpp.s
+
+.PHONY : tpparser.s
+
+# target to generate assembly for a file
+tpparser.cpp.s:
+	$(MAKE) -f CMakeFiles/TurboPascal.dir/build.make CMakeFiles/TurboPascal.dir/tpparser.cpp.s
+.PHONY : tpparser.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -282,6 +309,9 @@ help:
 	@echo "... sa_visitor.o"
 	@echo "... sa_visitor.i"
 	@echo "... sa_visitor.s"
+	@echo "... tpparser.o"
+	@echo "... tpparser.i"
+	@echo "... tpparser.s"
 .PHONY : help
 
 

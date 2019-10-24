@@ -87,6 +87,12 @@
 		<Unit filename="/mnt/c/Users/Kristmann Ingi/Documents/Uni/Compilers/GitHub/TurboPascal/ast.h">
 			<Option target="TurboPascal"/>
 		</Unit>
+		<Unit filename="/mnt/c/Users/Kristmann Ingi/Documents/Uni/Compilers/GitHub/TurboPascal/bparser.h">
+			<Option target="TurboPascal"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Kristmann Ingi/Documents/Uni/Compilers/GitHub/TurboPascal/cmake-build-debug/tpparser.h">
+			<Option target="TurboPascal"/>
+		</Unit>
 		<Unit filename="/mnt/c/Users/Kristmann Ingi/Documents/Uni/Compilers/GitHub/TurboPascal/common.h">
 			<Option target="TurboPascal"/>
 		</Unit>
@@ -124,6 +130,12 @@
 			<Option target="TurboPascal"/>
 		</Unit>
 		<Unit filename="/mnt/c/Users/Kristmann Ingi/Documents/Uni/Compilers/GitHub/TurboPascal/symbol_table.h">
+			<Option target="TurboPascal"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Kristmann Ingi/Documents/Uni/Compilers/GitHub/TurboPascal/tpparser.cpp">
+			<Option target="TurboPascal"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Kristmann Ingi/Documents/Uni/Compilers/GitHub/TurboPascal/tpparser.cpp.rule">
 			<Option target="TurboPascal"/>
 		</Unit>
 		<Unit filename="/mnt/c/Users/Kristmann Ingi/Documents/Uni/Compilers/GitHub/TurboPascal/CMakeLists.txt">

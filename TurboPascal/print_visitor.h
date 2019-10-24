@@ -212,7 +212,6 @@ class PrintVisitor : public AST::Visitor {
 
   void visit(const AST::ProgramNode *node) override {
     assert(node != nullptr);
-
     output(os_, indent_++, "(ProgramNode " + node->get_name() + "\n");
     accept(node->get_block());
     output(os_, --indent_, ")\n");

@@ -20,11 +20,19 @@ class BParser: public Parser {
   };
 
   virtual std::string get_name() const override { return "Bisonmade"; }
+  SymbolTable* get_SymbolTable(){
+    return &symbol_table_;
+  }
+  AST::Node* get_AST() {
+    cout << "getting ast " << endl;
+    return ast_;
+  }
 
   Lexer lexer_;
   Lexer::Token token_;
   std::string scope_;
-
+  SymbolTable symbol_table_;
+  AST::Node* ast_;
 };
 
 #endif //TURBOPASCAL_BPARSER_H

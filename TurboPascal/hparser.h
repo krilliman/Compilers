@@ -21,6 +21,7 @@ class HParser: public Parser {
   int parse() override;
 
   virtual std::string get_name() const override { return "Handmade"; }
+  SymbolTable* get_SymbolTable()  { return &symbol_table_; }
 
  private:
 
