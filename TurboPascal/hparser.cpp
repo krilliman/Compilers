@@ -30,7 +30,9 @@ ProgramNode* HParser::program() {
 
 BlockNode* HParser::main_block() {
   auto var_decl = variable_declarations();
+  cout << "variable declarations done in main block" << endl;
   auto call_decl = callable_declarations();
+  cout << "callable declarations done in main block" << endl;
   auto cstmt = compound_statement();
   return new BlockNode(var_decl, call_decl, cstmt);
 }
@@ -197,6 +199,10 @@ AssignmentStmtNode* HParser::assignment_statement(string identifier ) {
 
 
 EmptyStmtNode* HParser::empty_statement() {
+  cout << "====> SymbolTable in empty" << endl;
+  for ( auto entry : symbol_table_.get() ) {
+    cout << entry.first << ' ' << entry.second.str() << endl;
+  }
   return new EmptyStmtNode();
 }
 
@@ -317,13 +323,23 @@ ProcedureDeclNode* HParser::procedure_declaration() {
   match_token(LNG::TN::t_identifier);
   auto params = optional_parameters();
   string signature = "";
+  cout << "before the for" << endl;
   if(params != nullptr){
     for(auto i : params->get_declarations()){
+      cout << "in first for line 327" << endl;
+      cout << "i type: " << i->get_data_type().str() << endl;
+      int count = 0;
       for(auto j : i->get_identifiers()){
-        signature += j + ":";
+        cout << "j: " << j << endl;
+        count++;
       }
-      signature += i->get_data_type().str() + ",";
+      for(int k = 0; k < count; k++){
+        signature += i->get_data_type().str() +  ",";
+      }
     }
+  }
+  if(signature != ""){
+    signature = signature.substr(0, signature.length()-1);
   }
   symbol_table_.add_procedure(identifier, signature);   // TO DO: Implement ... set signature
   match_token(LNG::TN::t_semicolon);
@@ -343,7 +359,9 @@ CallableDeclarationsNode* HParser::callable_declarations() {
   /* TO DO: Implement ... */
   while(loop){
     if(match_token_if(LNG::TN::t_procedure)){
+      cout << "line 356 done" << endl;
       auto procedure = procedure_declaration();
+      cout << "line 358 done" << endl;
       declarations.push_back(procedure);
     }
     else if(match_token_if(LNG::TN::t_function)){
@@ -351,6 +369,7 @@ CallableDeclarationsNode* HParser::callable_declarations() {
       declarations.push_back(function);
     }
     else{
+      cout << "loop false" << endl;
       loop = false;
     }
   }
@@ -368,7 +387,7 @@ VariableDeclarationsNode* HParser::optional_parameters() {
     declarations.push_back(list);
     while(match_token_if(LNG::TN::t_semicolon)){
       auto newList = parameter_list();
-      declarations.push_back(list);
+      declarations.push_back(newList);
     }
     match_token(LNG::TN::t_rparenthesis);
     return new VariableDeclarationsNode(declarations);
@@ -411,11 +430,21 @@ FunctionDeclNode* HParser::function_declaration() {
   LNG::DataType dType = LNG::DataType(type);
   match_token(LNG::TN::t_semicolon);
   string signature = "";
-  for(auto i : params->get_declarations()){
-    for(auto j : i->get_identifiers()){
-      signature += j + ":";
+  if(params != nullptr){
+    for(auto i : params->get_declarations()){
+      cout << "i type: " << i->get_data_type().str() << endl;
+      int count = 0;
+      for(auto j : i->get_identifiers()){
+        cout << "j: " << j << endl;
+        count++;
+      }
+      for(int k = 0; k < count; k++){
+        signature += i->get_data_type().str() +  ",";
+      }
     }
-    signature += i->get_data_type().str() + ",";
+  }
+  if(signature != ""){
+    signature = signature.substr(0, signature.length()-1);
   }
   // add signature to the symbol table
   symbol_table_.add_function(identifier, signature, dType);
@@ -424,6 +453,7 @@ FunctionDeclNode* HParser::function_declaration() {
   match_token(LNG::TN::t_semicolon);
   scope_ = "";
 
+  cout << "returning from function declaration"  << endl;
   auto retVal = new FunctionDeclNode(identifier, params, block_node, dType);
   return retVal;
 }
@@ -435,6 +465,7 @@ BlockNode* HParser::block() {
   auto vars = variable_declarations();
   auto statements = compound_statement();
   auto retVal = new BlockNode(vars, statements);
+  cout << "returnging from block: " << endl;
   return retVal;
 }
 
@@ -459,7 +490,7 @@ OptionalArgumentsNode* HParser::optional_arguments(){
     list<ExprNode*> list;
     auto expr = expression();
     list.push_back(expr);
-    while(match_token_if(LNG::TokenName::t_colon)){
+    while(match_token_if(LNG::TokenName::t_comma)){
       auto newExpr = expression();
       list.push_back(newExpr);
     }

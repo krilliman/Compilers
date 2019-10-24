@@ -1,7 +1,8 @@
 Program Test1;
 var
-    n: Integer;
+    n, k: Integer;
     a, b: Integer;
+    o: Boolean;
     r: Real;
     t: array [ 1 .. 5 ] of Boolean;
 
@@ -12,6 +13,16 @@ var
         else
             Factorial := n * Factorial( n - 1 );
         n := n * Factorial( n - 1 )
+    end;
+
+
+    function test2( o: boolean; n,k,z: integer): real;
+    begin
+    end;
+
+    function test( n,a,b: integer; o: boolean) : integer;
+    begin
+        test := n + a + b
     end;
 
     procedure Print;
@@ -32,6 +43,7 @@ begin
     WriteLn( a );
     WriteLn( b );
     n := 1;
+    k := test( n, a, b, o);
     while n < 4 do
     begin
         WriteLn( n );

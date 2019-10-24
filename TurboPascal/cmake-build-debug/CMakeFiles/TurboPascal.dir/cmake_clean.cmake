@@ -1,6 +1,9 @@
 file(REMOVE_RECURSE
+  "../tpparser.cpp"
+  "tpparser.h"
   "CMakeFiles/TurboPascal.dir/main.cpp.o"
   "CMakeFiles/TurboPascal.dir/hparser.cpp.o"
+  "CMakeFiles/TurboPascal.dir/tpparser.cpp.o"
   "CMakeFiles/TurboPascal.dir/sa_visitor.cpp.o"
   "CMakeFiles/TurboPascal.dir/lexer.cpp.o"
   "CMakeFiles/TurboPascal.dir/language.cpp.o"

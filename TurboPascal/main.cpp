@@ -6,6 +6,7 @@
 #include "ast.h"
 #include "print_visitor.h"
 #include "sa_visitor.h"
+#include "bparser.h"
 
 // NOTE: BParser will be released shortly.
 
@@ -54,13 +55,16 @@ int main( int argc, char* argv[] ) {
   }
 
   // Instantiate the right parser.
-  Parser *parser;
+  //Parser *parser;
   if (use_bison) {
-    //parser = new BParser(file, false, false); // Change flags to true for debugging.
+    //parser = new BParser(ifs, false, false); // Change flags to true for debugging.
   } else {
-    parser = new HParser(ifs, false, false);
+    //parser = new HParser(ifs, false, false);
   }
+  BParser *parser = new BParser(ifs, false, false); // Change flags to true for debugging
 
+  // node that we need to change this back when done with bison/started
+  //auto parser = new HParser(ifs, false, false);
   // Parse and output the generated abstract syntax tree.
   cout << "====> PARSING FILE " << filename
        << " USING PARSER " << parser->get_name() << endl;
@@ -76,10 +80,13 @@ int main( int argc, char* argv[] ) {
 
   if (ast != nullptr) {
     PrintVisitor pvisitor(cout);
-    SemanticAnalysisVisitor sAVisitor(st);
+    SemanticAnalysisVisitor sa_visitor(*st);
     ast->accept(pvisitor);
-    ast->accept(sAVisitor);
-
+    ast->accept(sa_visitor);
+    cout << "done with sa_visit" << endl;
+  }
+  else{
+    cout << "ast is a nullptr" << endl;
   }
 
   // Clean up and return.

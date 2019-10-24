@@ -157,6 +157,7 @@ class BParser;
 %type <std::string> t_real_l
 %type <std::string> t_string_l
 
+
 %type <AST::BlockNode*> main_block
 
 %type <AST::VariableDeclarationsNode*> variable_declarations
@@ -186,26 +187,48 @@ class BParser;
 %type <AST::IfStmtNode*> if_statement
 %type <AST::WhileStmtNode*> while_statement
 
+%type <AST::VariableDeclarationsNode*> opt_params
+%type <AST::VariableDeclNode*> parameter_list
+%type <std::list<AST::VariableDeclNode*>> list_parameterList_declaration
+%type <AST::VariableNode*> input_variable
+%type <AST::OptionalArgumentsNode*> optional_arguments
+%type <std::list<AST::ExprNode*>> arguments_list
+%type <AST::StmtNode*> simple_statement
+%type <AST::StmtNode*> structured_statement
+%type <std::list<AST::CallableDeclNode*>> callable_declarations_list
+
+%type <AST::ExprNode*> factor
+%type <AST::ExprNode*> signed_factor
+%type <AST::ExprNode*> complemented_factor
+%type <AST::ExprNode*> term
+%type <AST::ExprNode*> simple_expression
+
+%type <AST::FunctionCallExprNode*> function_call
+
 
 %%
 program:
     t_program t_identifier t_semicolon t_lpa
     main_block
     t_dot
-    { prs.set_AST( new AST::ProgramNode( $2, $4 ) ); }
+    {
+    prs.ast_ = new AST::ProgramNode( $2, $4 );
+    prs.set_AST( new AST::ProgramNode( $2, $4 ) );
+    }
 ;
 
 main_block:
     variable_declarations
     callable_declarations
     compound_statement
-    { $$ = new AST::BlockNode( $1, nullptr, $3 ); }   // NOTE
+    { $$ = new AST::BlockNode( $1, $2, $3 ); }   // NOTE
 ;
 
 variable_declarations:
     t_var list_variable_declaration
     { $$ = new AST::VariableDeclarationsNode( $2 ); }
     |
+    empty_statement
     { $$ = nullptr; }
 ;
 
@@ -219,7 +242,13 @@ list_variable_declaration:
 
 variable_declaration:
     list_identifier t_colon type
-    { $$ = new AST::VariableDeclNode( $1, $3 ); }
+    {
+    LNG::DataType newType = LNG::DataType($3);
+    for(auto i : $1){
+        prs.symbol_table_.add_var(prs.scope_, i, newType);
+    }
+    $$ = new AST::VariableDeclNode( $1, $3 );
+    }
 ;
 
 argument_list:
@@ -278,25 +307,90 @@ list_statement:
 //
 ////////////////////////////////////////////////////////////////////////////////////////
 
+
+
 procedure_declarations:
-    t_procedure t_identifier opt_params t_semicolon main_block
-    { $$ = new AST::ProcedureDeclNode( $2, $3, $5); }
+    t_procedure
+    t_identifier
+    opt_params
+    t_semicolon
+    main_block
+    {
+    prs.scope_ = $2;
+    AST::ProcedureDeclNode* node = new AST::ProcedureDeclNode( $2, $3, $5);
+    std::string signature = "";
+    for(auto i : $3->get_declarations()){
+        int count = 0;
+        for(auto j : i->get_identifiers()){
+            count++;
+        }
+        for(int k = 0; k < count; k++){
+            signature += i->get_data_type().str() +  ",";
+        }
+    }
+    signature = signature.substr(0, signature.length()-1);
+    prs.symbol_table_.add_procedure($2, signature);
+    prs.scope_ = "";
+    $$ = node;
+    }
 ;
 
-function_declarations:
-    t_function t_identifier opt_params t_colon simple_type t_semicolon main_block
-    { $$ = new AST::FunctionDeclNode( $2, $3, $,7 $5 ); }
+function_declaration:
+    t_function
+    t_identifier
+    opt_params
+    t_colon
+    simple_type
+    t_semicolon main_block
+    {
+    prs.scope_ = $2;
+    LNG::DataType newType = LNG::DataType($5);
+    AST::FunctionDeclNode* node = new AST::FunctionDeclNode( $2, $3, $7, newType);
+    prs.scope_  = "";
+    $$ = node;
+    }
 ;
 
 opt_params:
+    t_lparenthesis list_parameterList_declaration t_rparenthesis
+    {$$ = new AST::VariableDeclarationsNode($2);}
+;
+
+parameter_list:
+    list_identifier t_colon simple_type
+    {
+    LNG::DataType newType = LNG::DataType($3);
+    $$ = new AST::VariableDeclNode($1, newType);
+    }
+;
+
+list_parameterList_declaration:
+    list_parameterList_declaration  t_semicolon parameter_list
+    {$1.push_back($3); $$ = $1;}
+    |
+    empty_statement
+    {
+    std::list<AST::VariableDeclNode*> lst;
+    $$ = lst;
+    }
+    |
+    parameter_list
+    {std::list<AST::VariableDeclNode*> lst; lst.push_back($1); $$ = lst;}
 
 ;
 
 callable_declarations:
-    procedure_declarations   { $$ = $1; }
-    |
-    function_declarations   { $$ = $1; }
+    callable_declarations_list {$$ = new CallableDeclarationsNode($1);}
 ;
+
+callable_declarations_list:
+    callable_declarations_list procedure_declarations   { $1.push_back($2); $$ = $1; }
+    |
+    callable_declarations_list function_declaration   { $1.push_back($2); $$ = $1; }
+    |
+    {std::list<AST::CallableDeclNode*> lst; $$ = lst;}
+;
+
 
 input_variable:
     variable_lvalue         { $$ = $1; }
@@ -315,23 +409,31 @@ read_statement:
 write_statement:
     t_write
     input_variable
-    { $$ = new AST::WriteStmtNode( $2 ); }
+    {$$ = new AST::WriteStmtNode( $2->get_expr() );}
     |
     t_writeln
     input_variable
-    { $$ = new AST::WriteStmtNode( $2, true); }
+    { $$ = new AST::WriteStmtNode( $2->get_expr(), true); }
 ;
 
 procedure_statement:
     t_identifier optional_arguments
-    { $$ = new AST: ProcedureCallStmtNode( $1, $2 ); }
+    { $$ = new AST::ProcedureCallStmtNode( $1, $2->get_list() ); }
 ;
 
 optional_arguments:
-    empty_statement { $$ = $1; }
+    empty_statement { $$ = nullptr; }
     |
-    t_lparenthesis expression t_lbracket t_comma expression t_rbracket t_rparenthesis
-    { $$ = ; }
+    t_lparenthesis arguments_list t_rparenthesis
+    { $$ = new AST::OptionalArgumentsNode($2); }
+;
+
+arguments_list:
+    arguments_list t_comma expression
+    {$1.push_back($3); $$ = $1;}
+    |
+    expression
+    {std::list<AST::ExprNode*> lst; lst.push_back($1); $$ = lst;}
 ;
 
 simple_statement:
@@ -382,11 +484,6 @@ assignment_statement:
     t_assign
     expression
     { $$ = new AST::AssignmentStmtNode( $1, $3); }
-    |
-    t_function
-    t_assign
-    expression
-    { $$ = new AST::AssignmentStmtNode( $1, $3); }
 ;
 
 
@@ -399,6 +496,48 @@ expression:
     t_integer_l
     { $$ = new AST::IntegerExprNode( std::stoi($1) ); }
 ;
+
+simple_expression:
+    variable_r
+;
+factor:
+    variable_r
+    |
+    constant
+    |
+    t_lparenthesis expression t_rparenthesis
+    |
+    function_call
+;
+
+constant:
+    t_integer
+    |
+    t_real
+    |
+    t_boolean
+;
+
+signed_factor:
+    factor
+    |
+    ?????????????????????????????
+;
+complemented_factor:
+    signed_factor
+    |
+    t_not signed_factor
+;
+term:
+    complemented_factor
+;
+
+function_call:
+    t_identifier optional_arguments
+;
+
+
+
 
 %%
 
